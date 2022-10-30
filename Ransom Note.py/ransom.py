@@ -1,10 +1,9 @@
-def canConstruct(ransomNote: str, magazine: str) -> bool:
-    checker = True
+def canConstruct(ransomNote: str, magazine: str) -> bool:    
     for i in range(len(ransomNote)):
+        #checks how many letter in second text if it is not enough returns false and quit
         if(ransomNote.count(ransomNote[i]) > magazine.count(ransomNote[i])):
-            checker = False
-            return checker
-    return checker
+            return False
+    return True
 
 def main():
     first = input("first: ")
